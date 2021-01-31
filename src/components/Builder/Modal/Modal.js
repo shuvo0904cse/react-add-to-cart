@@ -1,8 +1,7 @@
 import React from 'react';
 import classes from './Modal.module.css';
 
-const Modal = ({showModal, submitOrder}) => {
-
+const Modal = ({showModal, modal, submitOrder}) => {
     return (
         <div>
             <div className={[classes.modalBody, showModal ? classes.modalDisplayBlock : classes.modalDisplayNone].join([' '])}>
@@ -40,7 +39,8 @@ const Modal = ({showModal, submitOrder}) => {
                                 ></textarea>
                             </li>
                             <li>
-                                <button>Submit Order</button>
+                                <button type="button" className={classes.order}>Submit Order</button> &nbsp; &nbsp;
+                                <button type="button" onClick={ modal.bind(this)} className={classes.close}>Close</button>
                             </li>
                         </ul>
                     </form>

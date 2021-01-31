@@ -8,6 +8,26 @@
     background-color: white;
 }
 
+.close {
+    background-color: #ec0707;
+    color: #fff;
+    border-color: #28a745;
+    border: 1px solid transparent;
+    width: 40%;
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+.order {
+    background-color: #0014ff;
+    color: #fff;
+    border-color: #28a745;
+    border: 1px solid transparent;
+    width: 40%;
+    padding: 5px 0;
+    font-weight: bold;
+}
+
 .backDropDisplayNone{
     display: none;
 }

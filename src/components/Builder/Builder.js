@@ -11,11 +11,13 @@ const Builder = ({items, price, scoops, showModal, add, remove, modal, submitOrd
                 <h3>Build your own Ice Cream Sundae</h3>
                 <Items items={items} scoops={scoops} add={add} remove={remove}/>
                 <TotalPrice price={price}/>
-                <button type="button" onClick={modal.bind(this)} className={[classes.order, 'classes'].join([" "])}>
-                    Add to Cart
-                </button>
+                {scoops.length > 0 &&
+                    <button type="button" onClick={modal.bind(this)} className={[classes.order, 'classes'].join([" "])}>
+                        Add to Cart
+                    </button>
+                }
             </div>
-            <Modal showModal={showModal} submitOrder={submitOrder}/>
+            <Modal showModal={showModal} modal={modal} submitOrder={submitOrder}/>
         </div>
     )
 }
