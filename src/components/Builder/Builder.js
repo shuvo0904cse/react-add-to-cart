@@ -4,7 +4,7 @@ import Items from "./Items/Items";
 import TotalPrice from "./TotalPrice/TotalPrice";
 import Modal from "./Modal/Modal";
 
-const Builder = ({items, price, scoops, showModal, add, remove, modal, submitOrder}) => {
+const Builder = ({items, price, scoops, showModal, order, add, remove, modal, submitOrder}) => {
     return(
         <div>
             <div className={classes.builder}>
@@ -17,7 +17,7 @@ const Builder = ({items, price, scoops, showModal, add, remove, modal, submitOrd
                     </button>
                 }
             </div>
-            <Modal showModal={showModal} modal={modal} submitOrder={submitOrder}/>
+            <Modal showModal={showModal} modal={modal} order={order} submitOrder={submitOrder}/>
         </div>
     )
 }

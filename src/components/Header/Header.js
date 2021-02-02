@@ -1,6 +1,9 @@
 import React from 'react'
 import classes from './Header.module.css'
 import logo from '../../assets/cherry.png'
+import NavigationMenu from "./NavigationMenu/NavigationMenu";
+import { BrowserRouter } from 'react-router-dom';
+
 const Header = () => {
     return (
         <header>
@@ -13,6 +16,9 @@ const Header = () => {
                 >React</strong
                 >
                 </div>
+            </div>
+            <div className="container">
+                <NavigationMenu/>
             </div>
         </header>
     )

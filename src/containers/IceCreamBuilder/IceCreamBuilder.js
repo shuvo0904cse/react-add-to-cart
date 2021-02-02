@@ -7,7 +7,13 @@ class IceCreamBuilder extends Component {
         items : {},
         scoops:[],
         totalPrice: 0,
-        showModal: false
+        showModal: false,
+        order : {
+            name : "",
+            phone_no:"",
+            email: "",
+            address: ""
+        }
     };
 
     componentDidMount() {
@@ -77,11 +83,11 @@ class IceCreamBuilder extends Component {
     };
 
     render() {
-        const {items, totalPrice, scoops, showModal} = this.state
+        const {items, totalPrice, scoops, showModal, order} = this.state
         return (
             <div className="container">
                 <IceCream scoops={scoops}/>
-                <Builder items={items} price={totalPrice} scoops={scoops} showModal={showModal} add={this.addScoop} remove={this.removeScoop} modal={this.modalOpen} submitOrder={this.submitOrder}/>
+                <Builder items={items} price={totalPrice} scoops={scoops} showModal={showModal} order={order} add={this.addScoop} remove={this.removeScoop} modal={this.modalOpen} submitOrder={this.submitOrder}/>
             </div>
         );
     }
